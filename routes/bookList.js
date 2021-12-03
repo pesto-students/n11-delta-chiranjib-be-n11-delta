@@ -1,6 +1,8 @@
-var express = require('express');
-var router = express.Router();
-const crud = require('../crud');
+const express = require('express');
+const router = express.Router();
+
+const crud = require('../crud/books');
+
 
 // GET Books List
 router.get('/', function(req, res, next) {
