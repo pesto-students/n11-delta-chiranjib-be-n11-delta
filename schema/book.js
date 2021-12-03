@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const book = new Schema({
+const BookSchema = new Schema({
     title: String,
     author: String,
     pages: Number,
@@ -14,4 +14,4 @@ const book = new Schema({
     imageUri: String
 });
 
-module.exports = book;
+module.exports = BookSchema;

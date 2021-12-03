@@ -7,6 +7,9 @@ const mongoose = require("mongoose");
 
 const indexRouter = require('./routes/index');
 const bookListRouter = require('./routes/bookList');
+const loginRouter = require('./routes/login');
+const signupRouter = require('./routes/signup');
+const passport = require('passport');
 
 const app = express();
 
@@ -15,13 +18,19 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(passport.initialize());
 
 mongoose.connect(
   process.env.MONGODB_URI
 );
+mongoose.connection.on('error', error => console.log(error) );
+
+require('./core/auth');
 
 app.use('/', indexRouter);
 app.use('/books', bookListRouter);
+app.use('/login', loginRouter);
+app.use('/signup', signupRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -33,6 +42,8 @@ app.use(function(err, req, res, next) {
   // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
+
+  console.log(err.message)
 
   // send the error response
   res.send(err.status || 500);
