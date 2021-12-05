@@ -4,12 +4,12 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const mongoose = require("mongoose");
+const passport = require('passport');
 
 const indexRouter = require('./routes/index');
 const bookListRouter = require('./routes/bookList');
 const loginRouter = require('./routes/login');
 const signupRouter = require('./routes/signup');
-const passport = require('passport');
 
 const app = express();
 
@@ -42,8 +42,6 @@ app.use(function(err, req, res, next) {
   // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
-
-  console.log(err.message)
 
   // send the error response
   res.send(err.status || 500);

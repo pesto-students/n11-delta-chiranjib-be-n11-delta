@@ -3,16 +3,26 @@ const passport = require('passport');
 
 const router = express.Router();
 
-router.post(
-    '/',
-    passport.authenticate('signup', {session: false}),
-    async (req, res, next) => {
-        res.json(
-            {
-                message: 'SignUp Successful',
-                user: req.user
+router.post('/', 
+    async(req, res, next) => {
+        passport.authenticate('signup', {session: false},
+            async (err, user) => {      
+                if (err) {
+                    return res.status(400).json(
+                        {
+                            message: err.message
+                        }
+                    );
+                }
+
+                return res.json(
+                    {
+                        message: 'SignUp Successful',
+                        user: user
+                    }
+                );
             }
-        );
+        )(req, res, next);
     }
 );
 
