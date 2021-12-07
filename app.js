@@ -1,22 +1,42 @@
-var createError = require('http-errors');
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
+const createError = require('http-errors');
+const express = require('express');
+const path = require('path');
+const cookieParser = require('cookie-parser');
+const logger = require('morgan');
+const mongoose = require("mongoose");
+const passport = require('passport');
+const cors = require('cors');
 
-var indexRouter = require('./routes/index');
-var bookListRouter = require('./routes/bookList');
+const indexRouter = require('./routes/index');
+const bookListRouter = require('./routes/bookList');
+const loginRouter = require('./routes/login');
+const signupRouter = require('./routes/signup');
+const refreshTokenRouter = require('./routes/refreshToken');
 
-var app = express();
+const app = express();
 
 app.use(logger('dev'));
+app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(passport.initialize());
+
+mongoose.connect(
+  process.env.MONGODB_URI
+);
+mongoose.connection.on('error', error => console.log(error) );
+
+require('./core/auth');
+
+// passport.authenticate('jwt', { session: false }),
 
 app.use('/', indexRouter);
 app.use('/books', bookListRouter);
+app.use('/login', loginRouter);
+app.use('/signup', signupRouter);
+app.use('/refreshtoken', refreshTokenRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

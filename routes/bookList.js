@@ -1,10 +1,11 @@
-var express = require('express');
-var router = express.Router();
-const crud = require('../crud');
+const express = require('express');
+const router = express.Router();
+
+const crud = require('../crud/books');
+
 
 // GET Books List
 router.get('/', function(req, res, next) {
-
   // request params
   let page = req.query.page;
   let limit = req.query.limit;
@@ -20,7 +21,6 @@ router.get('/', function(req, res, next) {
       }
     );
   }).catch(error => {
-    console.log(error);
     res.status(500).json(
       {
         "error": "Internal Server Error."
