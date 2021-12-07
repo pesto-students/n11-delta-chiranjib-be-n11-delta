@@ -25,7 +25,7 @@ router.post('/', async (req, res, next) => {
             }
 
             const body = { _id: user._id, email: user.email };
-            const token = jwt.sign({ user: body }, 'TOP_SECRET');
+            const token = jwt.sign({ user: body }, 'TOP_SECRET', {expiresIn: 60});
 
             return res.json({ token });
           }

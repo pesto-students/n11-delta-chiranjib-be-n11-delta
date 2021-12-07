@@ -5,6 +5,7 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const mongoose = require("mongoose");
 const passport = require('passport');
+const cors = require('cors');
 
 const indexRouter = require('./routes/index');
 const bookListRouter = require('./routes/bookList');
@@ -14,6 +15,7 @@ const signupRouter = require('./routes/signup');
 const app = express();
 
 app.use(logger('dev'));
+app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
@@ -26,6 +28,8 @@ mongoose.connect(
 mongoose.connection.on('error', error => console.log(error) );
 
 require('./core/auth');
+
+// passport.authenticate('jwt', { session: false }),
 
 app.use('/', indexRouter);
 app.use('/books', bookListRouter);

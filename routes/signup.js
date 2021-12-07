@@ -8,9 +8,15 @@ router.post('/',
         passport.authenticate('signup', {session: false},
             async (err, user) => {      
                 if (err) {
+                    if (err.message.toLowerCase().includes("dup key")) {
+                        msg = "Email already registered"
+                    } else {
+                        msg = err.message
+                    }
+
                     return res.status(400).json(
                         {
-                            message: err.message
+                            message: msg
                         }
                     );
                 }
