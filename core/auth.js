@@ -60,7 +60,7 @@ passport.use(
 passport.use(
     new JWTstrategy(
       {
-        secretOrKey: 'TOP_SECRET',
+        secretOrKey: process.env.ENCRYPTION_SECRET,
         jwtFromRequest: ExtractJWT.fromUrlQueryParameter('secret_token')
       },
       async (token, done) => {

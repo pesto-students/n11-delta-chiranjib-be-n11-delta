@@ -11,6 +11,7 @@ const indexRouter = require('./routes/index');
 const bookListRouter = require('./routes/bookList');
 const loginRouter = require('./routes/login');
 const signupRouter = require('./routes/signup');
+const refreshTokenRouter = require('./routes/refreshToken');
 
 const app = express();
 
@@ -35,6 +36,7 @@ app.use('/', indexRouter);
 app.use('/books', bookListRouter);
 app.use('/login', loginRouter);
 app.use('/signup', signupRouter);
+app.use('/refreshtoken', refreshTokenRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

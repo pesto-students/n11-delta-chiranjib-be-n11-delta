@@ -25,9 +25,32 @@ router.post('/', async (req, res, next) => {
             }
 
             const body = { _id: user._id, email: user.email };
-            const token = jwt.sign({ user: body }, 'TOP_SECRET', {expiresIn: 60});
+            const token = jwt.sign(
+              { 
+                user: body 
+              }, 
+              process.env.ENCRYPTION_SECRET, 
+              {
+                expiresIn: parseInt(process.env.TOKEN_EXPIRE_TIME)
+              }
+            );
+            const refreshToken = jwt.sign(
+              {
+                token:token,
+                user: body
+              },
+              process.env.ENCRYPTION_SECRET,
+              {
+                expiresIn: parseInt(process.env.REFRESH_TOKEN_EXPIRE_TIME)
+              }
+            )
 
-            return res.json({ token });
+            return res.json(
+              { 
+                token: token,
+                refreshToken: refreshToken
+              }
+            );
           }
         );
       } catch (error) {
