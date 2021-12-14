@@ -9,9 +9,11 @@ const cors = require("cors");
 
 const indexRouter = require("./routes/index");
 const bookListRouter = require("./routes/bookList");
+const bookDetailRouter = require("./routes/bookDetail");
 const loginRouter = require("./routes/login");
 const signupRouter = require("./routes/signup");
 const refreshTokenRouter = require("./routes/refreshToken");
+const userListRouter = require("./routes/userList");
 
 const app = express();
 
@@ -32,9 +34,11 @@ require("./core/auth");
 
 app.use("/", indexRouter);
 app.use("/books", bookListRouter);
+app.use("/book", bookDetailRouter);
 app.use("/login", loginRouter);
 app.use("/signup", signupRouter);
 app.use("/refresh", refreshTokenRouter);
+app.use("/users", userListRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

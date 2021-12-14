@@ -44,6 +44,11 @@ router.post("/", async (req, res, next) => {
         return res.json({
           token: token,
           refreshToken: refreshToken,
+          user: {
+            username: user.username ?? null,
+            email: user.email,
+            isSuperAdmin: user.isSuperAdmin
+          }
         });
       });
     } catch (error) {

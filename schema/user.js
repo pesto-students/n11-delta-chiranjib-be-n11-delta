@@ -16,6 +16,10 @@ const UserSchema = new schema({
     type: String,
     required: true,
   },
+  isSuperAdmin: {
+    type: Boolean,
+    default: false
+  }
 });
 
 UserSchema.pre("save", async function (next) {
