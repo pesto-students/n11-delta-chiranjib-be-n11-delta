@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 const schema = mongoose.Schema;
+const addressSchema =  require("./address")
 const bcrypt = require("bcrypt");
 
 const UserSchema = new schema({
@@ -19,7 +20,8 @@ const UserSchema = new schema({
   isSuperAdmin: {
     type: Boolean,
     default: false
-  }
+  },
+  addresses: [addressSchema]
 });
 
 UserSchema.pre("save", async function (next) {
