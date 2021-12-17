@@ -13,8 +13,20 @@ async function getBooksByTimestamp(skip, limit) {
   return await models.bookModel.find().sort({_id:-1}).skip(skip).limit(limit);
 }
 
+async function saveBookDetails(bookDetail) {
+  const book = new models.bookModel(bookDetail);
+  book.save((err, result)=> {
+    if (err) {
+      throw err;
+    } else {
+      return result;
+    }
+  });
+}
+
 module.exports = {
   getBooks: getBooks,
   getBookDetail: getBookDetail,
-  getBooksByTimestamp: getBooksByTimestamp
+  getBooksByTimestamp: getBooksByTimestamp,
+  saveBookDetails: saveBookDetails
 };
