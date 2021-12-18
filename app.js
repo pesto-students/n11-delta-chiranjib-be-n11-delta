@@ -48,7 +48,7 @@ app.use("/users", userListRouter);
 app.use("/upload", passport.authenticate('jwt', { session: false }), uploadRouter);
 app.use("/me", passport.authenticate('jwt', { session: false }), userProfileRouter);
 app.use("/orders", passport.authenticate('jwt', { session: false }), orderRouter);
-app.use("/reviews", passport.authenticate('jwt', { session: false }), reviewRouter);
+app.use("/reviews", reviewRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

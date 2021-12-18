@@ -1,11 +1,13 @@
 const express = require("express");
 const router = express.Router();
+const passport = require("passport");
 const ErrorCodes = require("../core/constants");
 
-const crud = require("../crud/reviews");
+const crudReviews = require("../crud/reviews");
+const crudOrders = require("../crud/orders");
 
 // Save new Order
-router.post("/new", function (req, res, next) {
+router.post("/new", passport.authenticate('jwt', { session: false }), function (req, res, next) {
 
   if (!req.body.bookId || !req.body.title || !req.body.comment || !req.body.rating) {
     return res.status(ErrorCodes.BAD_REQUEST).json({
@@ -21,7 +23,7 @@ router.post("/new", function (req, res, next) {
       comment: req.body.comment,
       rating: parseInt(req.body.rating)
     }
-    result = crud.saveReview(review);
+    result = crudReviews.saveReview(review);
     return res.json({"message": "Review saved."});
   } catch (error) {
       console.log(error);
@@ -40,7 +42,7 @@ router.get("/", function (req, res, next) {
     });
   }
 
-  crud
+  crudReviews
     .getBookReviews(req.query.bookId)
     .then((reviews) => {
       res.json({
@@ -53,6 +55,36 @@ router.get("/", function (req, res, next) {
         error: "Internal Server Error.",
       });
     });
+});
+
+// To check if user can post a review for a book
+router.get("/user/:bookId", passport.authenticate('jwt', { session: false }), function (req, res, next) {
+
+  user_id = req.user._id;
+  book_id = req.params.bookId;
+  is_eligible = false;
+
+  crudOrders.getUserOrders(user_id).then((orders) => {
+      if (orders) {
+          outer_loop:
+          for (let order of orders) {
+              for (let item of order.orderDetails) {
+                  if (item.bookId == book_id) {
+                      is_eligible = true;
+                      break outer_loop;
+                  }
+              }
+          }
+      }
+      return res.json({
+        bookId: book_id,
+        canPostReview: is_eligible
+      })
+  }).catch((error) => {
+    return res.status(500).json({
+      error: "Internal Server Error.",
+    });
+  });
 });
 
 module.exports = router;
