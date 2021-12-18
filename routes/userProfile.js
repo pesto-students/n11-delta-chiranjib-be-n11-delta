@@ -3,7 +3,7 @@ const router = express.Router();
 
 const crud = require("../crud/users");
 
-// GET Users Data
+// GET User's Data
 router.get("/", function (req, res, next) {
   // request params
   let _id = req.user._id;
@@ -21,6 +21,15 @@ router.get("/", function (req, res, next) {
         error: "Internal Server Error.",
       });
     });
+});
+
+// POST User's Data
+router.post("/", function (req, res, next) {
+  // request params
+  let _id = req.user._id;
+
+  //code to be written  
+  return res.json({});
 });
 
 module.exports = router;

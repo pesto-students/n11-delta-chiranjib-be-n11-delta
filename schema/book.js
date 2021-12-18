@@ -12,6 +12,10 @@ const BookSchema = new Schema({
   language: String,
   highlights: [String],
   imageUri: String,
+  avgRating: {
+    type: Number,
+    default: undefined,
+  },
 });
 
 module.exports = BookSchema;

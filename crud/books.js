@@ -24,9 +24,14 @@ async function saveBookDetails(bookDetail) {
   });
 }
 
+async function updateBookRating(bookId, bookRating) {
+  return await models.bookModel.updateOne({_id:bookId}, {avgRating: bookRating});
+}
+
 module.exports = {
   getBooks: getBooks,
   getBookDetail: getBookDetail,
   getBooksByTimestamp: getBooksByTimestamp,
-  saveBookDetails: saveBookDetails
+  saveBookDetails: saveBookDetails,
+  updateBookRating: updateBookRating,
 };

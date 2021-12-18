@@ -13,13 +13,7 @@ async function getAllReviews() {
 
 function saveReview(reviewDetail) {
   const review = new models.reviewModel(reviewDetail);
-  review.save((err, result)=> {
-    if (err) {
-      throw err;
-    } else {
-      return result;
-    }
-  });
+  return review.save();
 }
 
 module.exports = {
