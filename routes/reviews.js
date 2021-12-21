@@ -76,15 +76,15 @@ router.post(
 );
 
 // GET all book's reviews
-router.get("/", function (req, res, next) {
-  if (!req.query.bookId) {
+router.get("/:bookId", function (req, res, next) {
+  if (!req.params.bookId) {
     return res.status(ErrorCodes.BAD_REQUEST).json({
       message: "Please provide bookId",
     });
   }
 
   crudReviews
-    .getBookReviews(req.query.bookId)
+    .getBookReviews(req.params.bookId)
     .then((reviews) => {
       res.json({
         count: reviews.length,
