@@ -76,15 +76,15 @@ router.post(
 );
 
 // GET all book's reviews
-router.get("/:bookId", function (req, res, next) {
-  if (!req.params.bookId) {
+router.get("/", function (req, res, next) {
+  if (!req.query.bookId) {
     return res.status(ErrorCodes.BAD_REQUEST).json({
       message: "Please provide bookId",
     });
   }
 
   crudReviews
-    .getBookReviews(req.params.bookId)
+    .getBookReviews(req.query.bookId)
     .then((reviews) => {
       res.json({
         count: reviews.length,
@@ -99,7 +99,7 @@ router.get("/:bookId", function (req, res, next) {
 });
 
 // To check if user can post a review for a book
-router.get(
+router.post(
   "/user/:bookId",
   passport.authenticate("jwt", { session: false }),
   function (req, res, next) {
