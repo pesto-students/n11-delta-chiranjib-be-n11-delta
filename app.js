@@ -19,6 +19,7 @@ const uploadRouter = require("./routes/addBookToCatalogue");
 const userProfileRouter = require("./routes/userProfile");
 const orderRouter = require("./routes/orders");
 const reviewRouter = require("./routes/reviews")
+const cartRouter = require("./routes/cart");
 
 const app = express();
 
@@ -49,6 +50,7 @@ app.use("/upload", passport.authenticate('jwt', { session: false }), uploadRoute
 app.use("/me", passport.authenticate('jwt', { session: false }), userProfileRouter);
 app.use("/orders", passport.authenticate('jwt', { session: false }), orderRouter);
 app.use("/reviews", reviewRouter);
+app.use("/cart", passport.authenticate('jwt', { session: false }), cartRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

@@ -9,7 +9,24 @@ async function getUserById(_id) {
   return await models.userModel.findById(_id);
 }
 
+async function updateUserName(user_id, username) {
+  models.userModel.updateOne(
+    { _id: user_id },
+    { username: username },
+    function (err, result) {
+      if (err) {
+        console.log(err);
+        throw err;
+      } else {
+        console.log(result);
+        return result;
+      }
+    }
+  )
+}
+
 module.exports = {
     getUsersByTimestamp: getUsersByTimestamp,
-    getUserById: getUserById
+    getUserById: getUserById,
+    updateUserName: updateUserName
 };
