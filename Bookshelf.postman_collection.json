@@ -1,0 +1,466 @@
+{
+	"info": {
+		"_postman_id": "96102251-95ff-4b66-9e91-b36f297644a0",
+		"name": "Bookshelf",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Book List",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/books",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"books"
+					],
+					"query": [
+						{
+							"key": "secret_token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYxYWU1ODkxZTlhYjQwNDgyZGVjMTcxYyIsImVtYWlsIjoic2h1YmhhbS5iYW5zYWw4NzU0QGdtYWlsLmNvbSJ9LCJpYXQiOjE2Mzg4NzU1NDMsImV4cCI6MTYzODg3OTE0M30.iN9xtDLpKA0IWOV7D5kx16EG7j_DwyAVDEQworNfh7M",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "shubham.bansal1994@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "Mnbvcxz@12",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:4000/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "rajan@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "Rajan Gupta",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:4000/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RefreshToken",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/refreshtoken?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYxYWU1ODkxZTlhYjQwNDgyZGVjMTcxYyIsImVtYWlsIjoic2h1YmhhbS5iYW5zYWw4NzU0QGdtYWlsLmNvbSJ9LCJpYXQiOjE2Mzg4NzU1NDMsImV4cCI6MTYzODg3OTE0M30.iN9xtDLpKA0IWOV7D5kx16EG7j_DwyAVDEQworNfh7M&refresh_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbiI6ImV5SmhiR2NpT2lKSVV6STFOaUlzSW5SNWNDSTZJa3BYVkNKOS5leUoxYzJWeUlqcDdJbDlwWkNJNklqWXhZV1UxT0RreFpUbGhZalF3TkRneVpHVmpNVGN4WXlJc0ltVnRZV2xzSWpvaWMyaDFZbWhoYlM1aVlXNXpZV3c0TnpVMFFHZHRZV2xzTG1OdmJTSjlMQ0pwWVhRaU9qRTJNemc0TnpVMU5ETXNJbVY0Y0NJNk1UWXpPRGczT1RFME0zMC5pTjl4dERMcEtBMElXT1Y3RDVreDE2RUc3al9Ed3lBVkRFUXdvck5maDdNIiwidXNlciI6eyJfaWQiOiI2MWFlNTg5MWU5YWI0MDQ4MmRlYzE3MWMiLCJlbWFpbCI6InNodWJoYW0uYmFuc2FsODc1NEBnbWFpbC5jb20ifSwiaWF0IjoxNjM4ODc1NTQzLCJleHAiOjE2Mzg4OTM1NDN9.ueYMTIgw1lJI9UBRIWk2JKsjD7zLM-fov9DniXFceu0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"refreshtoken"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYxYWU1ODkxZTlhYjQwNDgyZGVjMTcxYyIsImVtYWlsIjoic2h1YmhhbS5iYW5zYWw4NzU0QGdtYWlsLmNvbSJ9LCJpYXQiOjE2Mzg4NzU1NDMsImV4cCI6MTYzODg3OTE0M30.iN9xtDLpKA0IWOV7D5kx16EG7j_DwyAVDEQworNfh7M"
+						},
+						{
+							"key": "refresh_token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbiI6ImV5SmhiR2NpT2lKSVV6STFOaUlzSW5SNWNDSTZJa3BYVkNKOS5leUoxYzJWeUlqcDdJbDlwWkNJNklqWXhZV1UxT0RreFpUbGhZalF3TkRneVpHVmpNVGN4WXlJc0ltVnRZV2xzSWpvaWMyaDFZbWhoYlM1aVlXNXpZV3c0TnpVMFFHZHRZV2xzTG1OdmJTSjlMQ0pwWVhRaU9qRTJNemc0TnpVMU5ETXNJbVY0Y0NJNk1UWXpPRGczT1RFME0zMC5pTjl4dERMcEtBMElXT1Y3RDVreDE2RUc3al9Ed3lBVkRFUXdvck5maDdNIiwidXNlciI6eyJfaWQiOiI2MWFlNTg5MWU5YWI0MDQ4MmRlYzE3MWMiLCJlbWFpbCI6InNodWJoYW0uYmFuc2FsODc1NEBnbWFpbC5jb20ifSwiaWF0IjoxNjM4ODc1NTQzLCJleHAiOjE2Mzg4OTM1NDN9.ueYMTIgw1lJI9UBRIWk2JKsjD7zLM-fov9DniXFceu0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Book List by Timestamp",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/books/bytimestamp?page=1&limit=5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"books",
+						"bytimestamp"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "limit",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User List by Timestamp",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/users/bytimestamp?page=1&limit=5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"users",
+						"bytimestamp"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "limit",
+							"value": "5"
+						},
+						{
+							"key": "secret_token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYxYWEyNjZkMGQ0ZWQyMzAxNGUzYmYwMiIsImVtYWlsIjoic2h1YmhhbS5iYW5zYWwxOTk0QGdtYWlsLmNvbSJ9LCJpYXQiOjE2Mzk0NzAxODQsImV4cCI6MTYzOTQ3Mzc4NH0.sph-05bl5iDvjhcB5Kg819K4vnDg3Kvf2gJCr_MOU18",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save Book",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "bookImage",
+							"type": "file",
+							"src": "/Users/svb/Downloads/Sweetball Logo/WhatsApp-Logo.wine.png"
+						},
+						{
+							"key": "title",
+							"value": "shubham",
+							"type": "text"
+						},
+						{
+							"key": "author",
+							"value": "svb",
+							"type": "text"
+						},
+						{
+							"key": "pages",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "dfdgdg",
+							"type": "text"
+						},
+						{
+							"key": "category",
+							"value": "dsfdsfg",
+							"type": "text"
+						},
+						{
+							"key": "quantity",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "45",
+							"type": "text"
+						},
+						{
+							"key": "language",
+							"value": "en",
+							"type": "text"
+						},
+						{
+							"key": "highlights",
+							"value": "efewrgrg",
+							"type": "text"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/upload/book",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"upload",
+						"book"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Me Profile",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/me?secret_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYxYWEyNjZkMGQ0ZWQyMzAxNGUzYmYwMiIsImVtYWlsIjoic2h1YmhhbS5iYW5zYWwxOTk0QGdtYWlsLmNvbSJ9LCJpYXQiOjE2Mzk2MjE1ODEsImV4cCI6MTYzOTYyNTE4MX0.vKxBqoDmFheGiv6yfEuqOUKca_2AbvymHc3lMGrBFBY",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"me"
+					],
+					"query": [
+						{
+							"key": "secret_token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYxYWEyNjZkMGQ0ZWQyMzAxNGUzYmYwMiIsImVtYWlsIjoic2h1YmhhbS5iYW5zYWwxOTk0QGdtYWlsLmNvbSJ9LCJpYXQiOjE2Mzk2MjE1ODEsImV4cCI6MTYzOTYyNTE4MX0.vKxBqoDmFheGiv6yfEuqOUKca_2AbvymHc3lMGrBFBY"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Order",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"value\": 10,\n    \"paymentMethod\": \"Cash\",\n    \"orderDetails\": [\n        {\n            \"bookId\": \"61a5e6b407f9c7a5238f9e2f\",\n            \"price\": 10,\n            \"quantity\": 1\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/orders/new?secret_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYxYWEyNjZkMGQ0ZWQyMzAxNGUzYmYwMiIsImVtYWlsIjoic2h1YmhhbS5iYW5zYWwxOTk0QGdtYWlsLmNvbSJ9LCJpYXQiOjE2Mzk2MjU0MzUsImV4cCI6MTYzOTYyOTAzNX0.qxHZF5ZTdpInvEqAprXu9x4vn4R89JSk_w7o5tsk7sY",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"orders",
+						"new"
+					],
+					"query": [
+						{
+							"key": "secret_token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYxYWEyNjZkMGQ0ZWQyMzAxNGUzYmYwMiIsImVtYWlsIjoic2h1YmhhbS5iYW5zYWwxOTk0QGdtYWlsLmNvbSJ9LCJpYXQiOjE2Mzk2MjU0MzUsImV4cCI6MTYzOTYyOTAzNX0.qxHZF5ZTdpInvEqAprXu9x4vn4R89JSk_w7o5tsk7sY"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Orders List",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/orders/?secret_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYxYWEyNjZkMGQ0ZWQyMzAxNGUzYmYwMiIsImVtYWlsIjoic2h1YmhhbS5iYW5zYWwxOTk0QGdtYWlsLmNvbSJ9LCJpYXQiOjE2Mzk4NTI2NjMsImV4cCI6MTYzOTg1NjI2M30.3_xFOtUdHuMb3Hf_7YmzvSq5KbyVhUAkzG6z95Yi80U",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"orders",
+						""
+					],
+					"query": [
+						{
+							"key": "secret_token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYxYWEyNjZkMGQ0ZWQyMzAxNGUzYmYwMiIsImVtYWlsIjoic2h1YmhhbS5iYW5zYWwxOTk0QGdtYWlsLmNvbSJ9LCJpYXQiOjE2Mzk4NTI2NjMsImV4cCI6MTYzOTg1NjI2M30.3_xFOtUdHuMb3Hf_7YmzvSq5KbyVhUAkzG6z95Yi80U"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Review",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"bookId\": \"61be3aabd1ff88781f33a872\",\n    \"title\": \"Average\",\n    \"comment\": \"Good book.\",\n    \"rating\": 3\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/reviews/new?secret_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYxYWEyNjZkMGQ0ZWQyMzAxNGUzYmYwMiIsImVtYWlsIjoic2h1YmhhbS5iYW5zYWwxOTk0QGdtYWlsLmNvbSJ9LCJpYXQiOjE2Mzk4NjA1NzEsImV4cCI6MTYzOTg2NDE3MX0.TzJgmU7O5s8PYVpc668Sdh6jpzGXHzJTO6FJ8N1B0bw",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"reviews",
+						"new"
+					],
+					"query": [
+						{
+							"key": "secret_token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYxYWEyNjZkMGQ0ZWQyMzAxNGUzYmYwMiIsImVtYWlsIjoic2h1YmhhbS5iYW5zYWwxOTk0QGdtYWlsLmNvbSJ9LCJpYXQiOjE2Mzk4NjA1NzEsImV4cCI6MTYzOTg2NDE3MX0.TzJgmU7O5s8PYVpc668Sdh6jpzGXHzJTO6FJ8N1B0bw"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Book Reviews",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/reviews?bookId=61be3aabd1ff88781f33a872",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"reviews"
+					],
+					"query": [
+						{
+							"key": "bookId",
+							"value": "61be3aabd1ff88781f33a872"
+						},
+						{
+							"key": "bookId",
+							"value": "1234",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Review User Check",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/reviews/user/:bookId?secret_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYxYWEyNjZkMGQ0ZWQyMzAxNGUzYmYwMiIsImVtYWlsIjoic2h1YmhhbS5iYW5zYWwxOTk0QGdtYWlsLmNvbSJ9LCJpYXQiOjE2Mzk4NTI2NjMsImV4cCI6MTYzOTg1NjI2M30.3_xFOtUdHuMb3Hf_7YmzvSq5KbyVhUAkzG6z95Yi80U",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"reviews",
+						"user",
+						":bookId"
+					],
+					"query": [
+						{
+							"key": "secret_token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYxYWEyNjZkMGQ0ZWQyMzAxNGUzYmYwMiIsImVtYWlsIjoic2h1YmhhbS5iYW5zYWwxOTk0QGdtYWlsLmNvbSJ9LCJpYXQiOjE2Mzk4NTI2NjMsImV4cCI6MTYzOTg1NjI2M30.3_xFOtUdHuMb3Hf_7YmzvSq5KbyVhUAkzG6z95Yi80U"
+						}
+					],
+					"variable": [
+						{
+							"key": "bookId",
+							"value": "61bb2139e6fab044a4115434"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
