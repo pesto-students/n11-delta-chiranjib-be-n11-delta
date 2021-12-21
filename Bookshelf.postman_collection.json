@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "96102251-95ff-4b66-9e91-b36f297644a0",
+		"_postman_id": "9911a83d-37e2-4666-9249-8b1b97321257",
 		"name": "Bookshelf",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -41,12 +41,12 @@
 					"urlencoded": [
 						{
 							"key": "email",
-							"value": "shubham.bansal1994@gmail.com",
+							"value": "rajan@gmail.com",
 							"type": "text"
 						},
 						{
 							"key": "password",
-							"value": "Mnbvcxz@12",
+							"value": "123456",
 							"type": "text"
 						}
 					]
@@ -284,7 +284,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:4000/me?secret_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYxYWEyNjZkMGQ0ZWQyMzAxNGUzYmYwMiIsImVtYWlsIjoic2h1YmhhbS5iYW5zYWwxOTk0QGdtYWlsLmNvbSJ9LCJpYXQiOjE2Mzk2MjE1ODEsImV4cCI6MTYzOTYyNTE4MX0.vKxBqoDmFheGiv6yfEuqOUKca_2AbvymHc3lMGrBFBY",
+					"raw": "http://localhost:4000/me?secret_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYxYmFhN2E4MmRjZmFlZmM5MGU1ZTIzMSIsImVtYWlsIjoicmFqYW5AZ21haWwuY29tIn0sImlhdCI6MTY0MDA5NDg0OSwiZXhwIjoxNjQwMDk4NDQ5fQ.udmosPZ_1wLmp0Jfo-cgRYpkfed8wjWigOfoqAFemzY",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -296,7 +296,7 @@
 					"query": [
 						{
 							"key": "secret_token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYxYWEyNjZkMGQ0ZWQyMzAxNGUzYmYwMiIsImVtYWlsIjoic2h1YmhhbS5iYW5zYWwxOTk0QGdtYWlsLmNvbSJ9LCJpYXQiOjE2Mzk2MjE1ODEsImV4cCI6MTYzOTYyNTE4MX0.vKxBqoDmFheGiv6yfEuqOUKca_2AbvymHc3lMGrBFBY"
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYxYmFhN2E4MmRjZmFlZmM5MGU1ZTIzMSIsImVtYWlsIjoicmFqYW5AZ21haWwuY29tIn0sImlhdCI6MTY0MDA5NDg0OSwiZXhwIjoxNjQwMDk4NDQ5fQ.udmosPZ_1wLmp0Jfo-cgRYpkfed8wjWigOfoqAFemzY"
 						}
 					]
 				}
@@ -318,7 +318,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:4000/orders/new?secret_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYxYWEyNjZkMGQ0ZWQyMzAxNGUzYmYwMiIsImVtYWlsIjoic2h1YmhhbS5iYW5zYWwxOTk0QGdtYWlsLmNvbSJ9LCJpYXQiOjE2Mzk2MjU0MzUsImV4cCI6MTYzOTYyOTAzNX0.qxHZF5ZTdpInvEqAprXu9x4vn4R89JSk_w7o5tsk7sY",
+					"raw": "http://localhost:4000/orders/new?secret_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYxYWUzNGI1MjQ1NmMwMzcxM2JkMWQ4YiIsImVtYWlsIjoiYWxpc2hhQGdtYWlsLmNvbSJ9LCJpYXQiOjE2Mzk5MDMxNDUsImV4cCI6MTYzOTkwNjc0NX0.1xlAIBWblYbqOc76yEzJHoPPUl4qwUQA5AuvmvbNHY8",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -331,7 +331,7 @@
 					"query": [
 						{
 							"key": "secret_token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYxYWEyNjZkMGQ0ZWQyMzAxNGUzYmYwMiIsImVtYWlsIjoic2h1YmhhbS5iYW5zYWwxOTk0QGdtYWlsLmNvbSJ9LCJpYXQiOjE2Mzk2MjU0MzUsImV4cCI6MTYzOTYyOTAzNX0.qxHZF5ZTdpInvEqAprXu9x4vn4R89JSk_w7o5tsk7sY"
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYxYWUzNGI1MjQ1NmMwMzcxM2JkMWQ4YiIsImVtYWlsIjoiYWxpc2hhQGdtYWlsLmNvbSJ9LCJpYXQiOjE2Mzk5MDMxNDUsImV4cCI6MTYzOTkwNjc0NX0.1xlAIBWblYbqOc76yEzJHoPPUl4qwUQA5AuvmvbNHY8"
 						}
 					]
 				}
@@ -435,7 +435,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:4000/reviews/user/:bookId?secret_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYxYWEyNjZkMGQ0ZWQyMzAxNGUzYmYwMiIsImVtYWlsIjoic2h1YmhhbS5iYW5zYWwxOTk0QGdtYWlsLmNvbSJ9LCJpYXQiOjE2Mzk4NTI2NjMsImV4cCI6MTYzOTg1NjI2M30.3_xFOtUdHuMb3Hf_7YmzvSq5KbyVhUAkzG6z95Yi80U",
+					"raw": "http://localhost:4000/reviews/user/:bookId?secret_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYxYWUzNGI1MjQ1NmMwMzcxM2JkMWQ4YiIsImVtYWlsIjoiYWxpc2hhQGdtYWlsLmNvbSJ9LCJpYXQiOjE2Mzk5MDMxNDUsImV4cCI6MTYzOTkwNjc0NX0.1xlAIBWblYbqOc76yEzJHoPPUl4qwUQA5AuvmvbNHY8",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -449,13 +449,82 @@
 					"query": [
 						{
 							"key": "secret_token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYxYWEyNjZkMGQ0ZWQyMzAxNGUzYmYwMiIsImVtYWlsIjoic2h1YmhhbS5iYW5zYWwxOTk0QGdtYWlsLmNvbSJ9LCJpYXQiOjE2Mzk4NTI2NjMsImV4cCI6MTYzOTg1NjI2M30.3_xFOtUdHuMb3Hf_7YmzvSq5KbyVhUAkzG6z95Yi80U"
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYxYWUzNGI1MjQ1NmMwMzcxM2JkMWQ4YiIsImVtYWlsIjoiYWxpc2hhQGdtYWlsLmNvbSJ9LCJpYXQiOjE2Mzk5MDMxNDUsImV4cCI6MTYzOTkwNjc0NX0.1xlAIBWblYbqOc76yEzJHoPPUl4qwUQA5AuvmvbNHY8"
 						}
 					],
 					"variable": [
 						{
 							"key": "bookId",
-							"value": "61bb2139e6fab044a4115434"
+							"value": "61a5e6b407f9c7a5238f9e2f"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Me Profile Update",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"Rajan Sharma\",\n    \"addressLine1\": \"Front Street\",\n    \"city\": \"Ghaziabad\",\n    \"state\": \"Uttar Pradesh\",\n    \"pincode\": 201001\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/me?secret_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYxYmFhN2E4MmRjZmFlZmM5MGU1ZTIzMSIsImVtYWlsIjoicmFqYW5AZ21haWwuY29tIn0sImlhdCI6MTY0MDA4NzMyOCwiZXhwIjoxNjQwMDkwOTI4fQ.mfOxusj0MDp5F6CtHwyjk-ALwP-qegk89UEOrtca4dk",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"me"
+					],
+					"query": [
+						{
+							"key": "secret_token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYxYmFhN2E4MmRjZmFlZmM5MGU1ZTIzMSIsImVtYWlsIjoicmFqYW5AZ21haWwuY29tIn0sImlhdCI6MTY0MDA4NzMyOCwiZXhwIjoxNjQwMDkwOTI4fQ.mfOxusj0MDp5F6CtHwyjk-ALwP-qegk89UEOrtca4dk"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Address in cart",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"address\": {\n        \"addressLine1\": \"Front Street\",\n        \"city\": \"Ghaziabad\",\n        \"state\": \"Uttar Pradesh\",\n        \"pincode\": 201001\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/cart/address?secret_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYxYmFhN2E4MmRjZmFlZmM5MGU1ZTIzMSIsImVtYWlsIjoicmFqYW5AZ21haWwuY29tIn0sImlhdCI6MTY0MDA5NDg0OSwiZXhwIjoxNjQwMDk4NDQ5fQ.udmosPZ_1wLmp0Jfo-cgRYpkfed8wjWigOfoqAFemzY",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"cart",
+						"address"
+					],
+					"query": [
+						{
+							"key": "secret_token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYxYmFhN2E4MmRjZmFlZmM5MGU1ZTIzMSIsImVtYWlsIjoicmFqYW5AZ21haWwuY29tIn0sImlhdCI6MTY0MDA5NDg0OSwiZXhwIjoxNjQwMDk4NDQ5fQ.udmosPZ_1wLmp0Jfo-cgRYpkfed8wjWigOfoqAFemzY"
 						}
 					]
 				}
