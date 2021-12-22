@@ -52,7 +52,7 @@ app.use("/me", passport.authenticate('jwt', { session: false }), userProfileRout
 app.use("/orders", passport.authenticate('jwt', { session: false }), orderRouter);
 app.use("/reviews", reviewRouter);
 app.use("/cart", passport.authenticate('jwt', { session: false }), cartRouter);
-app.use("/Payment", paymentRouter);
+app.use("/Payment", passport.authenticate('jwt', { session: false }), paymentRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
