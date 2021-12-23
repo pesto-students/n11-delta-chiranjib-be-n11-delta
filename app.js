@@ -20,7 +20,7 @@ const userProfileRouter = require("./routes/userProfile");
 const orderRouter = require("./routes/orders");
 const reviewRouter = require("./routes/reviews")
 const cartRouter = require("./routes/cart");
-const paymentRouter = require("./routes/payment")
+const paymentRouter = require("./routes/payment");
 
 const app = express();
 
