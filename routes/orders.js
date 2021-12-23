@@ -18,6 +18,7 @@ router.post("/new", function (req, res, next) {
       userId: req.user._id,
       value: req.body.value,
       paymentMethod: req.body.paymentMethod,
+      deliveredOn: new Date().setDate(new Date().getDate() + 5),
       orderDetails: req.body.orderDetails
     }
     result = crud.saveOrder(orderDetail);

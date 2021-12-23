@@ -4,7 +4,7 @@ const models = require("../core/models");
 async function getUserOrders(userId) {
   return await models.orderModel.find({
       userId: userId
-  }).populate('orderDetails.bookId', ['_id', 'title']);
+  }).populate('orderDetails.bookId', ['_id', 'title']).sort({createdOn: -1});
 }
 
 async function getAllOrders() {
