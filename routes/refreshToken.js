@@ -30,7 +30,7 @@ router.post("/", function (req, res, next) {
         }
       }
 
-      if (!decoded.token || !decoded.user || decoded.token != token) {
+      if (!decoded.token || !decoded.user) {
         return res.status(ErrorCodes.BAD_REQUEST).json({
           message: "Invalid refresh token",
         });
