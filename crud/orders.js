@@ -8,18 +8,12 @@ async function getUserOrders(userId) {
 }
 
 async function getAllOrders() {
-    return await models.orderModel.find({});
+    return await models.orderModel.find({}).sort({createdOn: -1});
 }
 
-function saveOrder(orderDetail) {
+async function saveOrder(orderDetail) {
   const order = new models.orderModel(orderDetail);
-  order.save((err, result)=> {
-    if (err) {
-      throw err;
-    } else {
-      return result;
-    }
-  });
+  return await order.save();
 }
 
 module.exports = {
