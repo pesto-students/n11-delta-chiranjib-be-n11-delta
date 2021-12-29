@@ -52,17 +52,23 @@ router.post("/new", function (req, res, next) {
         }
       });
 
-      crudCart
-        .deleteCart(req.user._id)
-        .then((result) => {
-          console.log("Cart deleted.");
-        })
-        .catch((error) => {
-          console.log(error);
-        })
-        .finally(() => {
-          return res.json({ message: "Order created." });
-        });
+      const message = "Order created successfully";
+
+      if (req.query.orderType === "cart") {
+        crudCart
+          .deleteCart(req.user._id)
+          .then((result) => {
+            console.log("Cart deleted.");
+          })
+          .catch((error) => {
+            console.log(error);
+          })
+          .finally(() => {
+            return res.json({message});
+          });
+      } else {
+        return res.json({message});
+      }
     })
     .catch((error) => {
       console.log(error);
