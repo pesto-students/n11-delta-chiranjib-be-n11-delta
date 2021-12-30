@@ -113,7 +113,7 @@ router.post(
         if (orders) {
           outer_loop: for (let order of orders) {
             for (let item of order.orderDetails) {
-              if (item.bookId == book_id) {
+              if (item.bookId._id == book_id) {
                 is_eligible = true;
                 break outer_loop;
               }
