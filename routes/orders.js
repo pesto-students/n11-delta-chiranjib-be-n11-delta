@@ -32,16 +32,14 @@ router.post("/new", function (req, res, next) {
   crud
     .saveOrder(orderDetail)
     .then((result) => {
+      const deliveryDate = result.deliveredOn.toDateString();
       const mailOptions = {
         from: process.env.GMAIL_USERNAME,
         to: req.user.email,
         subject: "Order Confirmation",
-        text:
-          "Your Order is confirmed. You paid a total amount of ₹" +
-          result.value +
-          " using card. Your expected delivery date is " +
-          result.deliveredOn +
-          ".",
+        text: `Thank you for your purchase on Bookshelf.
+        Your order of amount ${result.value} is scheduled to arrive on ${deliveryDate}.
+        Happy serving you!!`,
       };
 
       transporter.sendMail(mailOptions, function (error, info) {

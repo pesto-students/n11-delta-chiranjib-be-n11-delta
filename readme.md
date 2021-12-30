@@ -1,67 +1,63 @@
-## Table of contents
-
-- [Introduction](#introduction)
-- [Technologies](#technologies-used-to-build-this-project)
-- [Setup](#setup)
-- [Features](#features)
-- [Screenshots](#screenshots)
-- [Resources](#resources)
-- [Contributors](#contributors)
+# Bookshelf
 
 ## Introduction
 
-With Bookshelf, consumers do not need to blindly go to various places to find required books, they just simply go to Bookshelf and find it. Users can view its details, place an order, and then the book is delivered to their address. Users can see their orders placed, their status (delivered or not), and rate/review their ordered products.
+Bookshelf is an online bookstore system via which users do not need to blindly go to various places to find required books, they just simply go to Bookshelf and find it. The online bookstore system can not only reduce costs, save time, space, to bring convenience to everyone, but also promote the development of the logistics industry, serving three purposes, mutual benefit. Users can view its details, place an order and then the book is delivered to their address. Users can see their orders placed, their status (delivered date, order placed date), and rate/review their ordered products
 
--Live demo [_here_]().
-
-## Technologies used to build this project
-
-![React JS](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)\
-![Redux](https://img.shields.io/badge/Redux-593D88?style=for-the-badge&logo=redux&logoColor=white)\
-![Node.js](https://img.shields.io/badge/Nodejs-green?style=for-the-badge&logo=nodedotjs&logoColor=white)\
-![Mongo](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
-
-## Other Libraries Used
-
-![Material UI](https://img.shields.io/badge/Material--UI-0081CB?style=for-the-badge&logo=material-ui&logoColor=white)\
-![Heroku](https://img.shields.io/badge/Heroku-blueviolet?style=for-the-badge&logo=heroku&logoColor=white)
-
-## Setup
-
-Requires [Node.js](https://nodejs.org/) to run (v14.15.0+).
-
-Install the dependencies and open the terminal and then run the following command one by one.
-
-```sh
-
-```
-
-Verify by navigating to below address in your preferred browser.
-
-```sh
-
-```
-
-You should be able to see the landing page.
+Live demo [_here_](https://n11-bookshelf.herokuapp.com/)
 
 ## Features
 
-- PWA developed using React, React-hooks, Redux, Material-Ui and other useful resources mentioned above.
-- Fully responsive
-- Secured using oauth authentication
-- Unit test coverage(React Testing Library)
+- List of books with details available and options to search, sort and filter are also available so that user can find required book
+- Books can be added to cart for later purchase
+- Review and rate purchased book
+- Order history
+- User profile section to view/edit info like name and address
+
+## Code Features
+
+- Material-UI styled components and animations using Framer-Motion
+- Infinite scrolling dashboard showing books list
+- React functional components used with hooks
+- Secured using email & password based auth and Google auth
+- Frontend and backend are hosted on Heroku
+- Payment gateway integration (stripe)
+- AWS S3 integration for image storage
+
+## Technologies used to build this project
+
+![Node.js](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)\
+![Mongo](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)\
+![React JS](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)\
+![Heroku](https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white)
+
+## Other Libraries Used
+
+![Material UI](https://img.shields.io/badge/Material--UI-0081CB?style=for-the-badge&logo=material-ui&logoColor=white)
+![AWS S3](https://img.shields.io/badge/Amazon_AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white)
+
+## Setup
+
+Project frontend is built in React and bootstrapped using [Create React App](https://github.com/facebook/create-react-app).\
+Project backend is built in [Node.js](https://nodejs.org/) - Express JS + Mongo.
+
+Project uses commitizen for commit rules and guidelines
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 
 ## Screenshots
 
-
-
 ## Resources
 
-<a href="">High Level Design</a>
-<a href=""> PRD </a>\
-<a href=""> Wireframes</a>
+<a href="https://drive.google.com/file/d/1ptZ6xdF6dliTyXPCT2w5qyZVbsc8RTw1/view?usp=sharing">High Level Design</a>\
+<a href="https://drive.google.com/file/d/10yNUbAoiQGwUImQUXr2eTdWp6P7oXAP4/view?usp=sharing"> PRD </a>\
+<a href="https://www.figma.com/file/nRETa8aUznrjIq0keEzYoX/Bookshelf?node-id=0%3A1"> Wireframes</a>
 
-## Contributors
+## Contributors ✨
 
-<a href=""><img src="" width="100px;" alt=""/>Alisha Mahajan</a>
-<a href=""><img src="" width="100px;" alt=""/>Shubham Bansal</a>
+- <a href="https://github.com/Alisha-Mahajan">Alisha Mahajan</a>\
+- <a href="https://github.com/SVB-knowmywork">Shubham Bansal</a>
+
+## Community
+
+Many thanks to our mentor Chiranjib Nandy whose guidance help us to achieve our target and get chance to nurture our skills
+Thanks to the people who directly and indirectly supported us to accomplish this project.
