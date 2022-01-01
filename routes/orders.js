@@ -37,9 +37,12 @@ router.post("/new", function (req, res, next) {
         from: process.env.GMAIL_USERNAME,
         to: req.user.email,
         subject: "Order Confirmation",
-        text: `Thank you for your purchase on Bookshelf.
-        Your order of amount ${result.value} is scheduled to arrive on ${deliveryDate}.
-        Happy serving you!!`,
+        text: `
+Thank you for your purchase on Bookshelf.
+Your order of amount ${result.value} is scheduled to arrive on ${deliveryDate}.
+
+
+Happy serving you!!`,
       };
 
       transporter.sendMail(mailOptions, function (error, info) {
