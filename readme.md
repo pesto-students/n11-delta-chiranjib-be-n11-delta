@@ -44,8 +44,6 @@ Project backend is built in [Node.js](https://nodejs.org/) - Express JS + Mongo.
 Project uses commitizen for commit rules and guidelines
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 
-## Screenshots
-
 ## Resources
 
 <a href="https://drive.google.com/file/d/1ptZ6xdF6dliTyXPCT2w5qyZVbsc8RTw1/view?usp=sharing">High Level Design</a>\
