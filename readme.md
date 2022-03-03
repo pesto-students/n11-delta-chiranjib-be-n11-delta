@@ -1,6 +1,4 @@
-# Bookshelf
-
-<img src="./assets/bookshelf-logo.svg" width="300" height="100">
+<img src="./assets/bookshelf-logo.svg" alt="Bookshelf" width="300" height="100">
 
 ## Table of Contents
 
@@ -16,7 +14,7 @@
 
 Bookshelf is an online bookstore system via which users do not need to blindly go to various places to find required books, they just simply go to Bookshelf and find it. The online bookstore system can not only reduce costs, save time, space, to bring convenience to everyone, but also promote the development of the logistics industry, serving three purposes, mutual benefit. Users can view its details, place an order and then the book is delivered to their address. Users can see their orders placed, their status (delivered date, order placed date), and rate/review their ordered products
 
-Live demo [_here_](https://n11-bookshelf.herokuapp.com/)
+Live demo [_here_](https://n11-bookshelf.netlify.app/)
 
 ### Sample creds
 
@@ -61,6 +59,7 @@ GMAIL_PASSWORD =  // required (app account used for sending mails on successful 
 - Login using email & password and Google SSO
 - AWS S3 integration for image storage
 - Payment gateway integration (stripe)
+- Deployment on Heroku
 
 ## Technology Stack
 
