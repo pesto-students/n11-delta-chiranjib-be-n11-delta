@@ -10,7 +10,7 @@ const crudBooks = require("../crud/books");
 // Save new Order
 router.post(
   "/new",
-  passport.authenticate("jwt", { session: false }),
+  passport.authenticate("jwt", {session: false}),
   function (req, res, next) {
     if (
       !req.body.bookId ||
@@ -38,27 +38,23 @@ router.post(
           .getBookReviews(req.body.bookId)
           .then((reviews) => {
             let avg_rating = 0;
-            let count = 0;
-            for (let review of reviews) {
-              avg_rating += review.rating;
-              count += 1;
-            }
-            if (count) {
-              avg_rating = Math.floor(avg_rating / count);
-              crudBooks
-                .updateBookRating(req.body.bookId, avg_rating)
-                .then((result) => {
-                  console.log("Rating Updated Successfully");
-                })
-                .catch((error) => {
-                  console.log("Rating Update Failed");
-                });
-            }
+            reviews.forEach(({rating}) => {
+              avg_rating += rating;
+            });
+            avg_rating = Math.floor(avg_rating / reviews.length);
+            crudBooks
+              .updateBookRating(req.body.bookId, avg_rating)
+              .then(() => {
+                console.log("Rating Updated Successfully");
+              })
+              .catch((error) => {
+                console.log("Rating Update Failed");
+              });
           })
           .catch((error) => {
             console.log(error);
           });
-        return res.json({ message: "Review saved." });
+        return res.json({...review, createdOn: result.createdOn});
       })
       .catch((error) => {
         // console.log(error.message);
@@ -101,7 +97,7 @@ router.get("/", function (req, res, next) {
 // To check if user can post a review for a book
 router.post(
   "/user/:bookId",
-  passport.authenticate("jwt", { session: false }),
+  passport.authenticate("jwt", {session: false}),
   function (req, res, next) {
     user_id = req.user._id;
     book_id = req.params.bookId;
