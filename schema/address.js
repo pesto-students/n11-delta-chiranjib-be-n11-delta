@@ -6,10 +6,6 @@ const AddressSchema = new schema({
     type: String,
     required: true,
   },
-  addressLine2: {
-    type: String,
-    required: false,
-  },
   city: {
     type: String,
     required: true,
@@ -19,7 +15,7 @@ const AddressSchema = new schema({
     required: true,
   },
   pincode: {
-    type: Number,
+    type: String,
     required: true,
   },
   default: {

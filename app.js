@@ -51,6 +51,7 @@ app.use("/refresh", refreshTokenRouter);
 app.use("/users", userListRouter);
 app.use("/upload", passport.authenticate('jwt', { session: false }), uploadRouter);
 app.use("/me", passport.authenticate('jwt', { session: false }), userProfileRouter);
+app.use("/user", passport.authenticate('jwt', { session: false }), userProfileRouter);
 app.use("/orders", passport.authenticate('jwt', { session: false }), orderRouter);
 app.use("/reviews", reviewRouter);
 app.use("/cart", passport.authenticate('jwt', { session: false }), cartRouter);
